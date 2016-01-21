@@ -1,4 +1,4 @@
-System.register(['angular2/core', './my-component/my-component.component'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,33 +8,31 @@ System.register(['angular2/core', './my-component/my-component.component'], func
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, my_component_component_1;
-    var AppComponent;
+    var core_1;
+    var MyComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (my_component_component_1_1) {
-                my_component_component_1 = my_component_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            MyComponent = (function () {
+                function MyComponent() {
                 }
-                AppComponent = __decorate([
+                MyComponent = __decorate([
                     core_1.Component({
-                        moduleId: 'app/src/',
-                        selector: 'my-app',
-                        templateUrl: 'app.view.html',
-                        directives: [my_component_component_1.MyComponent]
+                        moduleId: 'app/src/my-component/',
+                        selector: 'my-component',
+                        templateUrl: 'my-component.view.html',
+                        styleUrls: ['my-component.style.css'],
+                        inputs: ['myInput']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], MyComponent);
+                return MyComponent;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("MyComponent", MyComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=my-component.component.js.map

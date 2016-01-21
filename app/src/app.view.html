@@ -1,2 +1,6 @@
-
-Test
+<p>Entire app lives in <b>APP.COMPONENT</b></p>
+Message <br><input type="text" [(ngModel)]="message"><br>
+ {{message}}
+<div>
+<my-component [myInput]="message"></my-component>
+</div>
