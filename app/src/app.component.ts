@@ -9,4 +9,8 @@ import { MyComponent } from './my-component/my-component.component'  ;
 })
 export class AppComponent {
     private message: string;
+    
+    logEverySecond() {
+        window.console.log('totally emitted');
+    }
 }

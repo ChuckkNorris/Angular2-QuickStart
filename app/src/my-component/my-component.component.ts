@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, Output, EventEmitter } from 'angular2/core';
 
 @Component({
     moduleId: 'app/src/my-component/',
@@ -9,4 +9,13 @@ import { Component } from 'angular2/core';
 })
 export class MyComponent {
     public myInput: string;
+    
+    @Output() everySecond = new EventEmitter();
+    
+    /**
+     *
+     */
+    constructor() {
+        setInterval(() => this.everySecond.emit('event'), 1000);
+    }
 }

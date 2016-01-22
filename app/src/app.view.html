@@ -2,5 +2,5 @@
 Message <br><input type="text" [(ngModel)]="message"><br>
  {{message}}
 <div>
-<my-component [myInput]="message"></my-component>
+<my-component [myInput]="message" (every-second)="logEverySecond()"></my-component>
 </div>

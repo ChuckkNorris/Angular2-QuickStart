@@ -22,6 +22,9 @@ System.register(['angular2/core', './my-component/my-component.component'], func
             AppComponent = (function () {
                 function AppComponent() {
                 }
+                AppComponent.prototype.logEverySecond = function () {
+                    window.console.log('totally emitted');
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         moduleId: 'app/src/',

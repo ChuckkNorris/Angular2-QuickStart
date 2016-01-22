@@ -17,8 +17,18 @@ System.register(['angular2/core'], function(exports_1) {
             }],
         execute: function() {
             MyComponent = (function () {
+                /**
+                 *
+                 */
                 function MyComponent() {
+                    var _this = this;
+                    this.everySecond = new core_1.EventEmitter();
+                    setInterval(function () { return _this.everySecond.emit('event'); }, 1000);
                 }
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], MyComponent.prototype, "everySecond", void 0);
                 MyComponent = __decorate([
                     core_1.Component({
                         moduleId: 'app/src/my-component/',
